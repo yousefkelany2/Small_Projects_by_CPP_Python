@@ -165,9 +165,9 @@ enemy = Enemy(100, 400, 64, 64, 500)
 font = pygame.font.SysFont("comicsans" , 35 ,True)
 def redrawGame():
     global moves
-    text = font.render("Score = " + str(score),True , BLACK)
+    text = font.render("Score = " + str(score) + "/20" ,True , BLACK)
     screen.blit(bg, (0, 0))
-    screen.blit(text,(500 , 10))
+    screen.blit(text,(450 , 10))
 
     enemy.draw(screen)
     man.draw(screen)
@@ -251,3 +251,4 @@ while True:
 #End main loop
  
     redrawGame()
+

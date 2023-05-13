@@ -202,7 +202,7 @@ def main():
     run = True
     FPS = 60
     level = 0
-    lives = 10  # number of enemy pass
+    lives = 20  # number of enemy pass
 #Control speed move laser and enemy and player===============
     enemies = []
     wave_length = 5

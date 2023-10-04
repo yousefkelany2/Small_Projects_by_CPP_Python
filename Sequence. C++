@@ -1,0 +1,126 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int points ;
+    string name ;
+    cout<<"           Plased Enter The Name            "<<endl;
+    cin>>name;
+    cout<<"           Hello     "<<name<<endl;
+    cout<<"          You Are Ready  "<<name<<endl;
+    int answer[5];
+    cout<<"Sequence 1 "<<endl;
+    cout <<" 1 | 2 | ? | 4 | 5 "<<endl;
+    cout<<"Enter Number  = ";
+    cin>>answer[0] ;
+
+    cout<<"Sequence 2 "<<endl;
+    cout <<" ? | 10 | 50 | 250 | 1250 "<<endl;
+    cout<<"Enter Number  = ";
+    cin>>answer[1] ;
+
+    cout<<"Sequence 3 "<<endl;
+    cout <<" 1 | 3 | 9 | 27 | ? "<<endl;
+    cout<<"Enter Number  = ";
+    cin>>answer[2] ;
+
+    cout<<"Sequence 4 "<<endl;
+    cout <<" 1 | 25 | 625 | ? | 390625 "<<endl;
+    cout<<"Enter Number  = ";
+    cin>>answer[3] ;
+
+    cout<<"Sequence 5 "<<endl;
+    cout <<" 15000 | ? | 600 | 120 | 24 "<<endl;
+    cout<<"Enter Number  = ";
+    cin>>answer[4] ;
+
+    int sequence[5][5]=
+    {
+ {1,2,3,4,5}  , // 1++
+ {2,10,50,250,1250} ,// nums* 5
+ {1,3,9,27,81}  , // nums * 3
+  {1 ,25 ,625,15625,390625 }  ,//nums * 25
+   {15000,3000,600,120,24}}  ; // nums / 5
+   if (answer[0]== sequence[0][2])
+    {
+    points ++;
+   }
+   if (answer[1]== sequence[1][0])
+    {
+    points ++;
+   }
+if (answer[2]== sequence[2][4])
+    {
+    points ++;
+   }
+if (answer[3]== sequence[3][3])
+    {
+    points ++;
+   }
+if (answer[4]== sequence[4][1])
+    {
+    points ++;
+   }
+
+if (points == 0) {
+    cout<<"      Result  "<<points<<"   From 5 "<<"  Very  Bad     "<<endl;
+
+}
+else if (points == 1) {
+    cout<<"      Result  "<<points<<"   From 5 "<<"     Bad     "<<endl;
+}
+else if (points == 2) {
+    cout<<"      Result  "<<points<<"   From 5 "<<"   Badacceptable   "<<endl;
+}
+else if (points == 3) {
+    cout<<"      Result  "<<points<<"   From 5 "<<"   Good     "<<endl;
+}
+else if (points == 4) {
+    cout<<"      Result  "<<points<<"   From 5 "<<"      Very Good     "<<endl;
+}
+else if (points == 5) {
+    cout<<"      Result  "<<points<<"   From 5 "<<"      Excellent     "<<endl;
+}
+cout<<endl;
+cout<<endl;
+cout<<endl;
+int user ;
+
+cout<<"       Do You Want  Show  All Result ??  ENTER = 0 " <<endl;
+cout<<"       Do You Want  Show  All Result  Sequence 1 ??  ENTER = 1 " <<endl;
+cout<<"       Do You Want  Show  All Result  Sequence 2 ??  ENTER = 2 " <<endl;
+cout<<"       Do You Want  Show  All Result  Sequence 3 ??  ENTER = 3 " <<endl;
+cout<<"       Do You Want  Show  All Result  Sequence 4 ??  ENTER = 4 " <<endl;
+cout<<"       Do You Want  Show  All Result  Sequence 5 ??  ENTER = 5 " <<endl;
+cin>>user;
+if(user == 0) {
+    cout<<"     Result Sequence 1  =  "<<sequence[0][2]<<endl;
+    cout<<"     Result Sequence 2  =  "<<sequence[1][0]<<endl;
+    cout<<"     Result Sequence 3  =  "<<sequence[2][4]<<endl;
+    cout<<"     Result Sequence 4  =  "<<sequence[3][3]<<endl;
+    cout<<"     Result Sequence 5  =  "<<sequence[4][1]<<endl;
+}
+else if (user == 1){
+    cout<<"     Result Sequence 1  =  "<<sequence[0][2]<<endl;
+}
+else if (user == 2){
+    cout<<"     Result Sequence 2  =  "<<sequence[1][0]<<endl;
+}
+else if (user == 3){
+    cout<<"     Result Sequence 3  =  "<<sequence[2][4]<<endl;
+}
+else if (user == 4){
+    cout<<"     Result Sequence 4  =  "<<sequence[3][3]<<endl;
+}
+else if (user == 5){
+    cout<<"     Result Sequence 5  =  "<<sequence[4][1]<<endl;
+}
+cout<<endl;
+cout<<endl;
+cout<<endl;
+cout  <<"            Thank   You    "<<name;
+
+    return 0;
+}
